@@ -1,0 +1,28 @@
+<h1>ログイン</h1>
+
+{% if error %}
+<div>{{ error }}</div>
+{% endif %}
+
+<form method="post">
+    {% csrf_token %}    
+    <div>
+        <label for="username">ユーザー名:</label>
+        <input type="text" id="username" name="username" required>
+    </div>
+    <div>
+        <label for="password">パスワード:</label>
+        <input type="password" id="password" name="password" required>
+    </div>
+    <div>
+        <label for="email">メールアドレス:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    <div>
+        <label for="industory_id">業界種別:</label>
+        <input type="industory_id" id="industory_id" name="industory_id" required>
+    </div>
+    <div>
+        <button type="submit">ログイン</button>
+    </div>
+</form>
